@@ -1,5 +1,5 @@
 # Created by: Ice Fox
-# Date: 2023-10-01
+# Date: 2025-05-20
 # Description: This script sends 100 GET requests to a specified API endpoint with a Bearer token for authorization.
 # Usage: Update the $uri and $bearerToken variables with your API endpoint and token.
 # PowerShell script to send 100 GET requests to an API endpoint with a Bearer token
