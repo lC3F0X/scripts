@@ -1,14 +1,20 @@
-# Created by: Ice Fox
-# Date: 2025-05-20
-# Description: This script sends 100 GET requests to a specified API endpoint with a Bearer token for authorization.
-# Usage: Update the $uri and $bearerToken variables with your API endpoint and token.
-# PowerShell script to send 100 GET requests to an API endpoint with a Bearer token
+<#
+.SYNOPSIS
+    Simulates multiple consecutive requests to an API endpoint to test rate limiting configurations.
 
-# Define the API endpoint
-$uri = ""
+.DESCRIPTION
+    'RateLimitStressTest.ps1' is a PowerShell script designed to send 100 authenticated GET requests using a Bearer token 
+    to a specified API endpoint. It helps verify whether rate limiting mechanisms are correctly implemented by monitoring 
+    the returned HTTP status codes (e.g., 429 Too Many Requests or 503 Service Unavailable).
 
-# Define the Bearer token (replace with your actual token)
-$bearerToken = ""  # Truncated for readability
+    This script is useful for stress testing rate limiting policies such as ASP.NET rate limiters or IIS Dynamic IP Restrictions.
+
+.NOTES
+    Author: Ice Fox
+    Version: 1.0
+    Created: 2025-05-20
+    Last Updated: 2025-05-24
+#>
 
 # Loop 100 times
 for ($i = 1; $i -le 100; $i++) {
